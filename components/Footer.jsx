@@ -19,7 +19,6 @@ const FooterComponent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 `;
 const CopyRight = styled.p`
   font-size: 14px;
@@ -27,6 +26,6 @@ const CopyRight = styled.p`
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.25px;
-  // text-align: center;
+  text-align: center;
 `;
 export default Footer;

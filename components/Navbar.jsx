@@ -8,7 +8,7 @@ const Navbar = () => {
     <NavbarContainer>
       <Image src={logo} width={225} height={48} alt="outerbase-logo" />
       <LinksContainer>
-        <Link href="/">
+        <Link href="/" passHref>
           <ALink>About</ALink>
         </Link>
         <Link href="/contact">
