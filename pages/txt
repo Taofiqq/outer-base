@@ -1,0 +1,29 @@
+
+      <MainComponent>
+        <DashOne>
+          <Image src="/line.png" width={60} height={239} alt="" />
+        </DashOne>
+        {/* <DashTwo></DashTwo> */}
+        <ParaOne>
+          Incorporated in 2022, Outerbase is a <br /> specialist in the
+          Information <br /> Technology and General Contracts <br /> Industry.
+        </ParaOne>
+        <ParaTwo>
+          Outerbase caters to the unique requirements of <br /> its users until
+          100% satisfaction is achieved
+        </ParaTwo>
+      </MainComponent>
+
+      {/* <ContactContainer>
+        <Text>
+          Contact Outerbase today for all your ICT, Real Estate <br />
+          and General Contract needs
+        </Text>
+        <ContactButton>Get In Touch</ContactButton>
+      </ContactContainer> */}
+
+      <FooterComponent>
+        <p>hello</p>
+        {/* <Image src={logo2} width={226} height={48} alt="outerbase-img" />
+        <CopyRight>© 2022, Outerbase, All rights reserved.</CopyRight> */}
+      </FooterComponent>

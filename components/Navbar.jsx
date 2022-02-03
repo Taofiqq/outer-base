@@ -19,7 +19,7 @@ const Navbar = () => {
   );
 };
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
