@@ -183,15 +183,24 @@ const Hero = styled.section`
   display: flex;
 
   @media screen and (max-width: 900px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 `;
 const Left = styled.div`
-  flex: 2;
+  @media screen and (min-width: 900px) {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 224px;
+    margin-top: 176px;
+  }
+
   display: flex;
   flex-direction: column;
-  padding-left: 224px;
-  margin-top: 176px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 116px;
 `;
 const HeroList = styled.p`
   font-style: normal;
@@ -200,6 +209,19 @@ const HeroList = styled.p`
   line-height: 0px;
   letter-spacing: 0.04em;
   color: #7579e7;
+
+  @media screen and (max-width: 900px) {
+    width: 296px;
+    height: 40px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #7579e7;
+  }
 `;
 const HeroText = styled.h1`
   font-style: normal;
@@ -211,6 +233,20 @@ const HeroText = styled.h1`
   text-align: left;
   margin-top: 32px;
   color: #000000;
+
+  @media screen and (max-width: 900px) {
+    width: 320px;
+    height: 176px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+  }
 `;
 const HeroButton = styled.button`
   width: 250px;
@@ -223,12 +259,18 @@ const HeroButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 40px;
+  }
 `;
 const Right = styled.div`
-  flex: 1;
-  position: relative;
-  margin-top: 13rem;
-  margin-right: 124px;
+  @media screen and (min-width: 900px) {
+    flex: 1;
+    position: relative;
+    margin-top: 13rem;
+    margin-right: 124px;
+  }
 `;
 const Curve = styled.div`
   width: 947px;
@@ -238,6 +280,10 @@ const Curve = styled.div`
   position: absolute;
   top: 20rem;
   right: -15rem;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const Person = styled.div`
   width: 599px;
@@ -260,6 +306,11 @@ const Industries = styled.div`
   align-items: flex-start;
 
   @media screen and (max-width: 900px) {
+    width: 346px;
+    height: 580px;
+    background: #ffffff;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
     display: none;
   }
 `;
@@ -269,10 +320,22 @@ const IndustryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const IndustryContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const IndustryText = styled.h1`
   font-style: normal;
@@ -292,6 +355,10 @@ const IndustryBox = styled.div`
   justify-content: center;
   padding: 0 10px;
   margin-right: 26px;
+
+  @media screen and (max-width: 900px) {
+    margin-bottom: 33px;
+  }
 `;
 const Icon = styled.div`
   width: 40px;
@@ -309,7 +376,7 @@ const IconText = styled.p`
 
 const MainComponent = styled.section`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: #fff;
   margin-top: -5rem;
   z-index: 20;
@@ -320,7 +387,10 @@ const MainComponent = styled.section`
   grid-template-rows: repeat(6, 6rem);
 
   @media screen and (max-width: 900px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 const ParaOne = styled.p`
@@ -330,6 +400,24 @@ const ParaOne = styled.p`
   font-size: 35px;
   line-height: 60px;
   color: #000000;
+
+  @media screen and (max-width: 900px) {
+    width: 416px;
+    height: 200px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 315px) {
+    font-size: 15px;
+  }
 `;
 const ParaTwo = styled.p`
   grid-row: 4/ 5;
@@ -339,6 +427,25 @@ const ParaTwo = styled.p`
   line-height: 60px;
   text-align: right;
   color: #000000;
+
+  @media screen and (max-width: 900px) {
+    width: 269px;
+    height: 93px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 315px) {
+    font-size: 15px;
+  }
 `;
 
 const Line = styled.div`
