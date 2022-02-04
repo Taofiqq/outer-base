@@ -24,7 +24,9 @@ export default function Home() {
             The general contractor <br /> ensuring total customer <br />{" "}
             satisfaction
           </HeroText>
-          <HeroButton>Get In Touch</HeroButton>
+          <HeroButton>
+            <Link href="/contact">Get In Touch</Link>
+          </HeroButton>
         </Left>
         <Right>
           <Curve></Curve>
