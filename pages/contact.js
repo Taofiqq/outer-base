@@ -6,6 +6,7 @@ const About = () => {
   return (
     <ContactContainer>
       <Header>Get in Touch</Header>
+
       <ContactOne>
         <Phone>
           <MessageButton>
@@ -76,12 +77,22 @@ const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 const Header = styled.h1`
   margin-top: 119px;
   margin-bottom: 64px;
 `;
 const ContactOne = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 840px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
 `;
 const Phone = styled.div`
   width: 367px;
@@ -89,13 +100,30 @@ const Phone = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   border-radius: 8px;
-  margin-right: 56px;
   display: flex;
-
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 840px) {
+    margin-right: 56px;
+  }
+  @media screen and (max-width: 840px) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 263px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
 `;
-const Number = styled.p``;
+const Number = styled.p`
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
+`;
 
 const Email = styled.div`
   width: 367px;
@@ -106,9 +134,20 @@ const Email = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 400px) {
+    width: 263px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
 `;
 const EmailAddress = styled.p`
   text-transform: lowercase;
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
 const MessageButton = styled.button`
   background: transparent;
@@ -128,6 +167,14 @@ const ContactTwo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 400px) {
+    width: 263px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
 `;
 
 const Address = styled.div`
@@ -138,6 +185,9 @@ const Address = styled.div`
 
 const AddressLine = styled.p`
   text-transform: capitalize;
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
 
 const FooterContainer = styled.div`
