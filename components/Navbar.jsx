@@ -6,7 +6,9 @@ import logo from "../public/logo.svg";
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <Image src={logo} width={225} height={48} alt="outerbase-logo" />
+      <Link href="/" passHref>
+        <Image src={logo} width={225} height={48} alt="outerbase-logo" />
+      </Link>
       <LinksContainer>
         <Link href="/" passHref>
           <ALink>About</ALink>
