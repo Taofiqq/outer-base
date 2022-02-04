@@ -366,8 +366,8 @@ const Square = styled.div`
   background: url("../square.png") no-repeat;
   position: absolute;
   // background-color: red;
-  left: 0.3rem;
-  top: 87.5rem;
+  left: 0.1rem;
+  top: 101rem;
   z-index: 100;
 `;
 const Square2 = styled.div`
@@ -376,8 +376,8 @@ const Square2 = styled.div`
   background: url("../square.png") no-repeat;
   position: absolute;
   // background-color: red;
-  right: 0.3rem;
-  bottom: -61.5rem;
+  right: 0.1rem;
+  bottom: -75rem;
   z-index: 100;
 `;
 
