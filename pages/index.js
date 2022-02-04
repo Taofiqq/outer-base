@@ -141,6 +141,11 @@ export default function Home() {
           Outerbase caters to the unique requirements of <br /> its users until
           100% satisfaction is achieved
         </ParaTwo>
+
+        <Line></Line>
+        <Line2></Line2>
+        <Line3></Line3>
+        <Line4></Line4>
       </MainComponent>
 
       {/* <Person></Person> */}
@@ -152,9 +157,9 @@ export default function Home() {
           </Text>
           <ContactButton>Get In Touch</ContactButton>
         </ContactContainer>
+        <Square></Square>
+        <Square2></Square2>
       </ContactWrapper>
-      {/* <Square></Square>
-      <Square2></Square2> */}
       <FooterWrapper>
         <FooterContainer>
           <Image src={logo2} width={226} height={48} alt="outerbase-img" />
@@ -236,7 +241,7 @@ const Industries = styled.div`
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
   border-radius: 24px;
   margin-top: -0.1rem;
-  margin-left: 3.5rem;
+  margin-left: 5rem;
   position: relative;
   padding-left: 56px;
   z-index: 30;
@@ -291,23 +296,78 @@ const IconText = styled.p`
 
 const MainComponent = styled.section`
   width: 100%;
-  height: 50vh;
+  height: 80vh;
   background: #fff;
   margin-top: -5rem;
   z-index: 20;
   position: relative;
+  display: grid;
+  padding: 160px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(6, 6rem);
 `;
-const ParaOne = styled.p``;
-const ParaTwo = styled.p``;
+const ParaOne = styled.p`
+  grid-column: 3/ 14;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 60px;
+  color: #000000;
+`;
+const ParaTwo = styled.p`
+  grid-row: 4/ 5;
+  grid-column: 7/-1;
+  font-weight: 100;
+  font-size: 26px;
+  line-height: 60px;
+  text-align: right;
+  color: #000000;
+`;
 
+const Line = styled.div`
+  width: 160px;
+  height: 0px;
+  border: 1px dashed #cfdbfb;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 50rem;
+  top: 18rem;
+`;
+const Line2 = styled.div`
+  width: 160px;
+  height: 0px;
+  border: 1px dashed #cfdbfb;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 55rem;
+  top: 23rem;
+`;
+const Line3 = styled.div`
+  width: 130px;
+  height: 0px;
+  border: 1px dashed #cfdbfb;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 53rem;
+  top: 17rem;
+`;
+const Line4 = styled.div`
+  width: 150px;
+  height: 0px;
+  border: 1px dashed #cfdbfb;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 56.5rem;
+  top: 21.7rem;
+`;
 const Square = styled.div`
   width: 110px;
   height: 192px;
   background: url("../square.png") no-repeat;
   position: absolute;
   // background-color: red;
-  left: 0.99rem;
-  top: 5.9rem;
+  left: 0.3rem;
+  top: 87.5rem;
   z-index: 100;
 `;
 const Square2 = styled.div`
@@ -316,8 +376,8 @@ const Square2 = styled.div`
   background: url("../square.png") no-repeat;
   position: absolute;
   // background-color: red;
-  right: 0.1rem;
-  bottom: 20.5rem;
+  right: 0.3rem;
+  bottom: -61.5rem;
   z-index: 100;
 `;
 
