@@ -201,5 +201,9 @@ const FooterContainer = styled.div`
   mix-blend-mode: normal;
   opacity: 0.5;
   margin-top: 110px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 16px;
+  }
 `;
 export default About;
