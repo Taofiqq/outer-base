@@ -157,7 +157,9 @@ export default function Home() {
             Contact Outerbase today for all your ICT, Real Estate <br />
             and General Contract needs
           </Text>
-          <ContactButton>Get In Touch</ContactButton>
+          <ContactButton>
+            <Link href="/contact">Get In Touch</Link>
+          </ContactButton>
         </ContactContainer>
         <Square></Square>
         <Square2></Square2>
@@ -298,7 +300,7 @@ const IconText = styled.p`
 
 const MainComponent = styled.section`
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background: #fff;
   margin-top: -5rem;
   z-index: 20;
