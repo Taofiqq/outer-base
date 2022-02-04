@@ -1,8 +1,6 @@
 import Head from "next/head";
-import logo from "../public/contact.svg";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import styled from "styled-components";
 import logo2 from "../public/logo.svg";
 
@@ -164,9 +162,12 @@ export default function Home() {
         <Square></Square>
         <Square2></Square2>
       </ContactWrapper>
+
       <FooterWrapper>
         <FooterContainer>
-          <Image src={logo2} width={226} height={48} alt="outerbase-img" />
+          <ImageDiv>
+            <Image src={logo2} width={226} height={48} alt="outerbase-img" />
+          </ImageDiv>
           <FooterText>© 2022, Outerbase, All rights reserved.</FooterText>
         </FooterContainer>
       </FooterWrapper>
@@ -180,6 +181,10 @@ const HomeContainer = styled.div`
 
 const Hero = styled.section`
   display: flex;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const Left = styled.div`
   flex: 2;
@@ -253,6 +258,10 @@ const Industries = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const IndustryWrapper = styled.div`
@@ -309,6 +318,10 @@ const MainComponent = styled.section`
   padding: 160px;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(6, 6rem);
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const ParaOne = styled.p`
   grid-column: 3/ 14;
@@ -392,6 +405,9 @@ const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 680px) {
+  }
 `;
 const ContactContainer = styled.div`
   display: flex;
@@ -408,6 +424,29 @@ const Text = styled.p`
   line-height: 64px;
   color: #ffffff;
   text-align: center;
+
+  @media screen and (max-width: 680px) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    width: 311px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  @media screen and (max-width: 325px) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    width: 201px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
 `;
 const ContactButton = styled.button`
   width: 200px;
@@ -436,6 +475,11 @@ const FooterContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const ImageDiv = styled.div`
+  @media screen and (max-width: 900px) {
+    width: 150px;
+  }
+`;
 
 const FooterText = styled.p`
   font-size: 18px;
@@ -443,7 +487,6 @@ const FooterText = styled.p`
   text-align: center;
   letter-spacing: -0.246165px;
   color: #000000;
-
   mix-blend-mode: normal;
   opacity: 0.5;
 `;
