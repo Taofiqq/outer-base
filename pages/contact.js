@@ -39,7 +39,7 @@ const About = () => {
               />
             </svg>
           </MessageButton>
-          <EmailAddress>hello@boxpay.com</EmailAddress>
+          <EmailAddress>ADMIN@MARBLEPOINTS.COM</EmailAddress>
         </Email>
       </ContactOne>
       <ContactTwo>
@@ -59,7 +59,8 @@ const About = () => {
             </svg>
           </MessageButton>
           <AddressLine>
-            4 Any location Str, <br /> Another Line here
+            10, HUGHES AVENUE, <br /> ALAGOMEJI, YABA, LAGOS, <br /> LAGOS
+            STATE, NIGERIA
           </AddressLine>
         </Address>
       </ContactTwo>
@@ -106,7 +107,9 @@ const Email = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const EmailAddress = styled.p``;
+const EmailAddress = styled.p`
+  text-transform: lowercase;
+`;
 const MessageButton = styled.button`
   background: transparent;
   border: none;
@@ -133,7 +136,9 @@ const Address = styled.div`
   align-items: center;
 `;
 
-const AddressLine = styled.p``;
+const AddressLine = styled.p`
+  text-transform: capitalize;
+`;
 
 const FooterContainer = styled.div`
   font-style: normal;
