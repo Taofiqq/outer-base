@@ -1,6 +1,4 @@
 import styled from "styled-components";
-// import message from "/message.svg";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -118,6 +116,14 @@ const Phone = styled.div`
     box-sizing: border-box;
     border-radius: 6.86649px;
   }
+
+  @media screen and (max-width: 290px) {
+    width: 233px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
 `;
 const Number = styled.p`
   @media screen and (max-width: 400px) {
@@ -137,6 +143,14 @@ const Email = styled.div`
 
   @media screen and (max-width: 400px) {
     width: 263px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
+
+  @media screen and (max-width: 290px) {
+    width: 233px;
     height: 80px;
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -170,6 +184,13 @@ const ContactTwo = styled.div`
 
   @media screen and (max-width: 400px) {
     width: 263px;
+    height: 80px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 6.86649px;
+  }
+  @media screen and (max-width: 290px) {
+    width: 233px;
     height: 80px;
     border: 1px solid #000000;
     box-sizing: border-box;

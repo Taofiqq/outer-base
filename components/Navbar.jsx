@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import logo from "../public/logo.svg";
-import { IoIosMenu, IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosMenu } from "react-icons/io";
+import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
   const [index, setIndex] = useState(0);
@@ -14,42 +15,45 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Link href="/" passHref>
-        <Image src={logo} width={225} height={48} alt="outerbase-logo" />
-      </Link>
-      <LinksContainer>
-        <AboutLink index={index} onClick={() => setIndex(0)}>
+      <NavbarWrapper>
+        <Logo>
           <Link href="/" passHref>
-            <ALink>About</ALink>
+            <Image src={logo} width={225} height={48} alt="outerbase-logo" />
           </Link>
-        </AboutLink>
-        <ContactLink index={index} onClick={() => setIndex(1)}>
-          <Link href="/contact">
-            <a>Contact</a>
-          </Link>
-        </ContactLink>
-      </LinksContainer>
-      <ResponsiveButton onClick={handleClick}>
-        {click ? (
-          <IoIosCloseCircleOutline size={25} />
-        ) : (
-          <IoIosMenu size={25} />
-        )}
-      </ResponsiveButton>
+        </Logo>
+
+        <LinksContainer>
+          <AboutLink index={index} onClick={() => setIndex(0)}>
+            <Link href="/" passHref>
+              <ALink>About</ALink>
+            </Link>
+          </AboutLink>
+          <ContactLink index={index} onClick={() => setIndex(1)}>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+          </ContactLink>
+        </LinksContainer>
+        <ResponsiveButton onClick={handleClick}>
+          {click ? <GrClose size={25} /> : <IoIosMenu size={25} />}
+        </ResponsiveButton>
+      </NavbarWrapper>
+      {/*
+       */}
 
       {click && (
         <>
           <ResLinksContainer>
-            <AboutLink index={index} onClick={() => setIndex(0)}>
+            <ResAboutLink index={index} onClick={() => setIndex(0)}>
               <Link href="/" passHref>
                 <ALink>About</ALink>
               </Link>
-            </AboutLink>
-            <ContactLink index={index} onClick={() => setIndex(1)}>
+            </ResAboutLink>
+            <ResContactLink index={index} onClick={() => setIndex(1)}>
               <Link href="/contact">
                 <a>Contact</a>
               </Link>
-            </ContactLink>
+            </ResContactLink>
           </ResLinksContainer>
         </>
       )}
@@ -58,13 +62,24 @@ const Navbar = () => {
 };
 
 const NavbarContainer = styled.nav`
+  padding: 0px 96px;
+  margin-top: 33px;
+
+  @media screen and (max-width: 840px) {
+    padding: 0px 35px;
+  }
+`;
+
+const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 96px;
-  margin-top: 33px;
 `;
-
+const Logo = styled.div`
+  @media screen and (max-width: 350px) {
+    width: 120px;
+  }
+`;
 const AboutLink = styled.div`
   border-bottom: ${({ index }) => (index === 0 ? "4px solid #000000" : "none")};
   margin-right: 96px;
@@ -91,14 +106,24 @@ const ResponsiveButton = styled.div`
 `;
 
 const ResLinksContainer = styled.div`
-  background: red;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 30vh;
+  width: 100vw;
 
   @media screen and (min-width: 1070px) {
     display: none;
   }
+`;
+
+const ResAboutLink = styled.div`
+  border-bottom: ${({ index }) => (index === 0 ? "4px solid #000000" : "none")};
+  margin-bottom: 2rem;
+`;
+const ResContactLink = styled.div`
+  border-bottom: ${({ index }) => (index === 1 ? "4px solid #000000" : "none")};
 `;
 export default Navbar;
