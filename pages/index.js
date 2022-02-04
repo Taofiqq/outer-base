@@ -222,7 +222,7 @@ const Curve = styled.div`
   background-color: #e5e5e5;
   border-radius: 299.5px 0px 0px 0px;
   position: absolute;
-  top: 18rem;
+  top: 20rem;
   right: -15rem;
 `;
 const Person = styled.div`
