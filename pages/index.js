@@ -192,7 +192,7 @@ const Left = styled.div`
     flex: 2;
     display: flex;
     flex-direction: column;
-    padding-left: 224px;
+    // padding-left: 224px;
     margin-top: 176px;
   }
 
