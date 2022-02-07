@@ -285,33 +285,31 @@ const Curve = styled.div`
     display: none;
   }
 `;
-const Person = styled.div`
-  width: 599px;
-  height: 599px;
-`;
+
 const Industries = styled.div`
-  width: 1296px;
-  height: 200px;
-  background: #fff;
-  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
-  border-radius: 24px;
-  margin-top: -0.1rem;
-  margin-left: 5rem;
-  position: relative;
-  padding-left: 56px;
-  z-index: 30;
+  width: 100%;
+  height: 700px;
+  margin-right: 3rem;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  @media screen and (max-width: 900px) {
-    width: 346px;
-    height: 580px;
-    background: #ffffff;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  @media screen and (min-width: 760px) {
+    width: 1296px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
-    display: none;
+    margin-top: -0.1rem;
+    margin-left: 5rem;
+    position: relative;
+    padding-left: 56px;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 `;
 
@@ -319,11 +317,12 @@ const IndustryWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  @media screen and (max-width: 900px) {
+  align-items: center;
+  @media screen and (min-width: 900px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 `;
 const IndustryContainer = styled.div`
